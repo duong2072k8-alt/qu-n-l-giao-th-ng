@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lí An toàn Giao thông</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav button {
+            margin: 5px;
+            padding: 10px 15px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        nav button:hover {
+            background-color: #0b63c9;
+        }
+        section {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            margin: 15px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #1e90ff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #999;
+        }
+        th, td {
+            padding: 10px;
+        }
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+        function hienThi(id) {
+            let sections = document.getElementsByTagName("section");
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>TRANG QUẢN LÍ AN TOÀN GIAO THÔNG</h1>
+    <p>Cung cấp thông tin quy định và mức xử phạt vi phạm giao thông</p>
+</header>
+
+<nav>
+    <button onclick="hienThi('duongbo')">Đường bộ</button>
+    <button onclick="hienThi('duongsat')">Đường sắt</button>
+    <button onclick="hienThi('duongthuy')">Đường thủy</button>
+    <button onclick="hienThi('duonghangkhong')">Đường hàng không</button>
+</nav>
+
+<section id="duongbo">
+    <h2>1. Giao thông Đường bộ</h2>
+    <p><b>Quy định an toàn:</b></p>
+    <ul>
+        <li>Người điều khiển xe máy, xe đạp điện phải đội mũ bảo hiểm đạt chuẩn.</li>
+        <li>Tuân thủ tín hiệu đèn giao thông, biển báo và vạch kẻ đường.</li>
+        <li>Không điều khiển phương tiện khi đã sử dụng rượu bia.</li>
+        <li>Chạy đúng tốc độ cho phép, giữ khoảng cách an toàn.</li>
+    </ul>
+
+    <p><b>Mức phạt vi phạm phổ biến:</b></p>
+    <table>
+        <tr>
+            <th>Hành vi</th>
+            <th>Mức phạt</th>
+        </tr>
+        <tr>
+            <td>Không đội mũ bảo hiểm</td>
+            <td>200.000 – 300.000 đồng</td>
+        </tr>
+        <tr>
+            <td>Vượt đèn đỏ</td>
+            <td>800.000 – 1.000.000 đồng</td>
+        </tr>
+        <tr>
+            <td>Sử dụng rượu bia khi lái xe</td>
+            <td>3.000.000 – 8.000.000 đồng</td>
+        </tr>
+    </table>
+</section>
+
+<section id="duongsat">
+    <h2>2. Giao thông Đường sắt</h2>
+    <p><b>Quy định an toàn:</b></p>
+    <ul>
+        <li>Không vượt rào chắn, không băng qua đường sắt khi có tàu đến.</li>
+        <li>Tuân theo tín hiệu đèn, chuông cảnh báo.</li>
+        <li>Không ném đá, vật cứng lên tàu hỏa.</li>
+    </ul>
+
+    <p><b>Mức phạt vi phạm:</b></p>
+    <table>
+        <tr>
+            <th>Hành vi</th>
+            <th>Mức phạt</th>
+        </tr>
+        <tr>
+            <td>Băng qua đường sắt sai quy định</td>
+            <td>300.000 – 500.000 đồng</td>
+        </tr>
+        <tr>
+            <td>Phá hoại công trình đường sắt</td>
+            <td>3.000.000 – 5.000.000 đồng</td>
+        </tr>
+    </table>
+</section>
+
+<section id="duongthuy">
+    <h2>3. Giao thông Đường thủy</h2>
+    <p><b>Quy định an toàn:</b></p>
+    <ul>
+        <li>Trang bị áo phao cho hành khách.</li>
+        <li>Không chở quá số người quy định.</li>
+        <li>Không điều khiển phương tiện khi không có giấy phép.</li>
+    </ul>
+
+    <p><b>Mức phạt vi phạm:</b></p>
+    <table>
+        <tr>
+            <th>Hành vi</th>
+            <th>Mức phạt</th>
+        </tr>
+        <tr>
+            <td>Không có áo phao</td>
+            <td>100.000 – 200.000 đồng</td>
+        </tr>
+        <tr>
+            <td>Chở quá số người</td>
+            <td>1.000.000 – 2.000.000 đồng</td>
+        </tr>
+    </table>
+</section>
+
+<section id="duonghangkhong">
+    <h2>4. Giao thông Đường hàng không</h2>
+    <p><b>Quy định an toàn:</b></p>
+    <ul>
+        <li>Tuân thủ hướng dẫn của tiếp viên hàng không.</li>
+        <li>Không mang vật nguy hiểm lên máy bay.</li>
+        <li>Không gây rối, đùa giỡn về an ninh hàng không.</li>
+    </ul>
+
+    <p><b>Mức phạt vi phạm:</b></p>
+    <table>
+        <tr>
+            <th>Hành vi</th>
+            <th>Mức phạt</th>
+        </tr>
+        <tr>
+            <td>Gây rối trên máy bay</td>
+            <td>3.000.000 – 5.000.000 đồng</td>
+        </tr>
+        <tr>
+            <td>Mang vật cấm lên máy bay</td>
+            <td>5.000.000 – 10.000.000 đồng</td>
+        </tr>
+    </table>
+</section>
+
+<footer>
+    <p>© 2026 – Bài thực hành Tin học 12 (Định hướng Tin học ứng dụng)</p>
+</footer>
+
+</body>
+</html>
